@@ -54,7 +54,7 @@ namespace Real_chat.Hubs
                     ConnectionId = Context.ConnectionId,
                     ChatRoom = room.Name,
                     UserName = userName,
-                    UserId = room.Id
+                    
                 };
 
                 _context.Connections.Add(connection);
@@ -68,7 +68,6 @@ namespace Real_chat.Hubs
             }
             catch (DbUpdateException ex)
             {
-                // Log the detailed error
                 Console.WriteLine($"DbUpdateException: {ex.Message}");
                 if (ex.InnerException != null)
                 {

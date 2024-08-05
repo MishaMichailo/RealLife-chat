@@ -7,7 +7,6 @@ namespace Real_chat.Models
     public class ChatMessage
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Message { get; set; }
         public DateTime Timestamp { get; set; }
